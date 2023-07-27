@@ -1,24 +1,33 @@
 # Vercel Navbar Recreation
 
-**[Inspired from vercel.com/design](vercel.com/design)**
+**vercel.com/design**
+*For educational and showcase purposes only*
 
 ![screen](screenshots/verc_scrn.jpg)
 
 ## Compare to original
 
-- [Original](https://vercel.com/)
-- [Recreation-Codepen](https://codepen.io/chaseottofy/pen/jOQevOV)
-- [Recreation-GithubPages]()
+### [View Original](https://vercel.com/)
+
+#### [View Recreation Codepen](https://codepen.io/chaseottofy/pen/jOQevOV)
+#### [View Recreation Github Pages](https://chaseottofy.github.io/vercel-nav/)
 
 ---
 
-### Fully functional
+## All Features Implemented
 
+- Pixel perfect representation
 - Navbar toggles between fixed and relative positioning depending on scroll position.
 - Navbar links are functional.
 - Responsive design.
 - Animations implemented.
 - Toggles between switch elements on scroll over relavent sections.
+- Zero dependencies.
+- **SVGs on Home screen from Vercel.**
+
+## Optimized
+
+![lh](screenshots/verc_light.jpg)
 
 ## Built With
 
@@ -30,7 +39,7 @@
 
 ## Installation and Usage
 
-This project uses a bare-bones tsup configuration.
+This project utilizes a bare-bones tsup configuration.
 
 **install**
 ```bash

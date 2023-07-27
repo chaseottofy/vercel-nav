@@ -1,0 +1,8 @@
+node_modules
+/src/drafts/
+/dist/
+/src/testing/
+/src/_docs/
+/src/data/
+copy-minimize.js
+tsup.config.js

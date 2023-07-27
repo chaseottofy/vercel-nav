@@ -1,0 +1,343 @@
+@font-face {
+  font-display: swap;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  src: local("Inter Regular"), local("Inter-Regular"), url(./inter-v12-latin-regular.woff2) format("woff2")
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  src: local("Inter Medium"), local("Inter-Medium"), url(./inter-v12-latin-500.woff2) format("woff2")
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 700;
+  src: local("Inter Bold"), local("Inter-Bold"), url(./inter-v12-latin-700.woff2) format("woff2")
+}
+
+:root {
+  --sans: "Inter", sans-serif, -apple-system, ui-sans-serif, system-ui, blinkmacsystemfont, sego ui, roboto, helvetica neue, arial, noto sans, sans-serif, monospace;
+  --accents-8: #fafafa;
+  --accents-7: #eaeaea;
+  --accents-6: #999;
+  --accents-5: #888;
+  --accents-4: #666;
+  --accents-3: #444;
+  --accents-2: #333;
+  --accents-1: #111;
+  --transition-left: left .2s ease-in-out;
+  --transition-width: width .2s ease-in-out;
+}
+
+*,
+*::before,
+*::after {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  line-height: 1.15;
+  tab-size: 4;
+  font-size: 20px;
+  text-size-adjust: 100%;
+  scroll-behavior: auto;
+}
+
+body {
+  font-family: var(--sans);
+  height: 100vh;
+  width: calc(100vw - calc(100vw - 100%));
+  text-rendering: optimizespeed;
+  font-size: 1rem;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: inherit;
+  position: relative;
+  background: #000;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+button {
+  background: none;
+  line-height: 1.15;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  text-transform: none;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.header-bg,
+.header-icon,
+.app-title,
+.switcher-disabled,
+.switcher-glow,
+.switcher-curr,
+.switcher-stroke,
+.start,
+.main section .section-title {
+  user-select: none;
+  pointer-events: none;
+}
+
+.header-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  z-index: 3;
+  opacity: 0.4;
+  background-image: url("./rings-bg.svg");
+  background-repeat: no-repeat;
+  background-size: 200% 200%;
+  background-position: center;
+  mix-blend-mode: screen;
+  overflow: hidden;
+}
+
+/* .header-bg svg {
+  width: 200%;
+  height: 200%;
+  transform: translate(-25%, -25%);
+} */
+
+.header-icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  z-index: 1;
+  overflow: hidden;
+  opacity: .2;
+}
+
+.app-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  font-size: 34.18px;
+  letter-spacing: -4px;
+  left: 0;
+  right: 0;
+  bottom: 100px;
+  margin: 0 auto;
+  z-index: 2;
+  padding: 0 5px;
+  opacity: .9;
+  flex-direction: column;
+}
+
+.app-title h1 {
+  font-weight: 500;
+  white-space: nowrap;
+  background: linear-gradient(to right, #fff, var(--accents-4));
+  background-position-x: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  position: relative;
+}
+
+.start {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  height: 44px;
+  width: 100%;
+}
+
+.switcher {
+  border: 1px solid var(--accents-2);
+  border-radius: 9999px;
+  box-shadow: none;
+  position: relative;
+  z-index: 10;
+}
+
+.switcher::after {
+  content: "";
+  background: linear-gradient(to left, var(--accents-2) 20%, var(--accents-2) 44%, var(--accents-6) 50%, var(--accents-3) 60%, var(--accents-2) 63%, var(--accents-2) 100%);
+  z-index: -1;
+  background-position-x: var(--x);
+  background-size: 200% auto;
+  position: absolute;
+  border-radius: inherit;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: background-position-x .6s ease;
+}
+
+.switcher-fixed {
+  position: fixed;
+  top: 15px;
+  margin: 0;
+}
+
+.switcher-root {
+  display: flex;
+  overflow: hidden;
+  border-radius: inherit;
+  padding: 4px;
+  background: var(--accents-1);
+  position: relative;
+}
+
+.switcher-btn {
+  border-radius: inherit;
+  height: 36px;
+  border: 0;
+  font-family: Inter, sans-serif;
+  padding: 0 20px;
+  font-size: 14px;
+  font-weight: 500;
+  background: transparent;
+  color: var(--accents-5);
+  position: relative;
+  cursor: pointer;
+  transition: color .15s ease;
+}
+
+.switcher-btn:hover {
+  color: var(--accents-8);
+}
+
+.btn-active {
+  color: var(--accents-8);
+  text-shadow: 1px 1px 12px hsl(0deg 0% 100% / 40%);
+}
+
+.switcher-stroke {
+  background: linear-gradient(90deg, transparent, var(--accents-4) 20%, var(--accents-2) 67.19%, transparent);
+  height: 1px;
+  position: absolute;
+  top: -1px;
+  width: 90%;
+  left: 32px;
+  z-index: -1;
+}
+
+.switcher-glow {
+  background: #fff;
+  border-radius: inherit;
+  position: absolute;
+  filter: blur(32px);
+  bottom: -52px;
+  z-index: 0;
+  height: 50px;
+  top: 4px;
+  width: 39.5px;
+  transition: var(--transition-left);
+}
+
+.switcher-curr {
+  position: absolute;
+  border-radius: inherit;
+  background: hsl(0deg 0% 100% / 8%);
+  top: 4px;
+  left: 4px;
+  width: 79px;
+  height: 36px;
+  transition: var(--transition-left), var(--transition-width);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.main section {
+  min-height: calc(100vh + 15px);
+  height: 100%;
+  position: relative;
+  background: #000;
+  z-index: 4;
+}
+
+.main section::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accents-4) 10%, var(--accents-4) 80%, transparent);
+  z-index: 2;
+  content: "";
+}
+
+.main section .section-title {
+  font-size: 34.18px;
+  text-transform: capitalize;
+  font-weight: 500;
+  letter-spacing: -3px;
+  white-space: nowrap;
+  padding: 75px 0 0 25px;
+  background: linear-gradient(120deg, var(--accents-8), var(--accents-4) 70%, var(--accents-8));
+  background-position-x: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  opacity: .9;
+}
+
+.main section:last-child {
+  min-height: 150vh;
+}
+
+@media (460px <=width <=640px) {
+  .app-title {
+    font-size: 27.34px;
+  }
+}
+
+@media (390px <=width <=460px) {
+  .app-title {
+    font-size: 24.61px;
+    letter-spacing: -2px;
+  }
+
+  .switcher {
+    transform: scale(.9);
+  }
+}
+
+@media (width <=390px) {
+  .app-title {
+    font-size: 21.88px;
+  }
+
+  .switcher {
+    transform: scale(.8);
+  }
+}

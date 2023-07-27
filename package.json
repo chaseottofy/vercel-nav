@@ -1,0 +1,40 @@
+{
+  "name": "vercel-menu",
+  "description": "Vercel Navbar Recreation",
+  "main": "dist/index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "copy-static": "node copy-minimize.js",
+    "predeploy": "npm run build && npm run copy-static",
+    "start": "node dist/index.js",
+    "build": "tsc && tsup src/index.ts",
+    "deploy": "gh-pages -d dist"
+  },
+  "author": "chase ottofy",
+  "license": "ISC",
+  "repository": {
+    "type":"git",
+    "url": "https://github.com/chaseottofy/vercel-nav.git"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.2.0",
+    "@typescript-eslint/parser": "^6.2.0",
+    "autoprefixer": "^10.4.14",
+    "cssnano": "^6.0.1",
+    "eslint": "^8.45.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript": "^17.1.0",
+    "eslint-plugin-airbnb-base": "^0.0.1-security",
+    "gh-pages": "^5.0.0",
+    "html-minifier": "^4.0.0",
+    "htmlnano": "^2.0.4",
+    "minify": "^10.3.0",
+    "stylelint": "^15.10.2",
+    "stylelint-config-standard": "^34.0.0",
+    "stylelint-config-standard-scss": "^10.0.0",
+    "svgo": "^3.0.2",
+    "tsup": "^7.1.0",
+    "typescript": "^5.1.6"
+  }
+}

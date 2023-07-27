@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="810" viewBox="0 0 1440 810" fill="none">
+  <g opacity="1" clip-path="url(#clip0_1328_22)">
+    <path class="ring" d="M720 842.176C957.133 842.176 1149.37 650.16 1149.37 413.296C1149.37 176.432 957.133 -15.5845 720 -15.5845C482.867 -15.5845 290.633 176.432 290.633 413.296C290.633 650.16 482.867 842.176 720 842.176Z" fill="url(#ra)" fill-opacity="0.2"></path>
+    <path class="ring" d="M1148.87 413.296C1148.87 649.883 956.857 841.676 720 841.676C483.143 841.676 291.133 649.883 291.133 413.296C291.133 176.708 483.143 -15.0845 720 -15.0845C956.857 -15.0845 1148.87 176.708 1148.87 413.296Z" stroke="url(#b)" stroke-opacity="0.12"></path>
+    <path class="ring" d="M719.998 726.264C897.848 726.264 1042.02 582.252 1042.02 404.604C1042.02 226.956 897.848 82.9438 719.998 82.9438C542.148 82.9438 397.973 226.956 397.973 404.604C397.973 582.252 542.148 726.264 719.998 726.264Z" fill="black" fill-opacity="0.25"></path>
+    <path class="ring" d="M1041.52 404.604C1041.52 581.975 897.572 725.764 719.998 725.764C542.424 725.764 398.473 581.975 398.473 404.604C398.473 227.233 542.424 83.4438 719.998 83.4438C897.572 83.4438 1041.52 227.233 1041.52 404.604Z" stroke="url(#c)" stroke-opacity="0.15"></path>
+    <path class="ring" d="M720 619.044C838.566 619.044 934.684 523.036 934.684 404.604C934.684 286.172 838.566 190.164 720 190.164C601.434 190.164 505.316 286.172 505.316 404.604C505.316 523.036 601.434 619.044 720 619.044Z" fill="white" fill-opacity="0.01"></path>
+    <path class="ring" d="M934.184 404.604C934.184 522.759 838.291 618.544 720 618.544C601.709 618.544 505.816 522.759 505.816 404.604C505.816 286.448 601.709 190.664 720 190.664C838.291 190.664 934.184 286.448 934.184 404.604Z" stroke="url(#d)" stroke-opacity="0.2"></path>
+    <path class="ring" d="M934.184 404.604C934.184 522.759 838.291 618.544 720 618.544C601.709 618.544 505.816 522.759 505.816 404.604C505.816 286.448 601.709 190.664 720 190.664C838.291 190.664 934.184 286.448 934.184 404.604Z" stroke="url(#e)" stroke-opacity="0.5"></path>
+    <path class="ring" d="M934.184 404.604C934.184 522.759 838.291 618.544 720 618.544C601.709 618.544 505.816 522.759 505.816 404.604C505.816 286.448 601.709 190.664 720 190.664C838.291 190.664 934.184 286.448 934.184 404.604Z" stroke="url(#f)" stroke-opacity="0.6"></path>
+  </g>
+  <defs>
+    <radialGradient id="ra" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(720 364) rotate(80.3639) scale(379.352 675.064)">
+    <stop stop-opacity=".9" stop-color="#000" />
+    <stop offset="1" stop-color="#777" />
+    </radialGradient>
+    <linearGradient id="b" x1="720" y1="-15.5845" x2="720" y2="842.176" gradientUnits="userSpaceOnUse">
+      <stop stop-color="white" offset="1"></stop>
+      <stop offset="1" stop-color="#8D8D8D" stop-opacity="0"></stop>
+    </linearGradient>
+    <linearGradient id="c" x1="719.998" y1="82.9438" x2="719.998" y2="726.264" gradientUnits="userSpaceOnUse">
+      <stop stop-color="white" offset="1"></stop>
+      <stop offset="1" stop-color="white" stop-opacity="0"></stop>
+    </linearGradient>
+    <linearGradient id="d" x1="720" y1="190.164" x2="720" y2="525.854" gradientUnits="userSpaceOnUse">
+      <stop stop-color="white" offset=".5"></stop>
+      <stop offset="1" stop-color="white" stop-opacity=".5"></stop>
+    </linearGradient>
+    <linearGradient id="e" x1="720" y1="190.164" x2="739.981" y2="264.235" gradientUnits="userSpaceOnUse">
+      <stop stop-color="white" offset="0"></stop>
+      <stop offset=".5" stop-color="white" stop-opacity=".4"></stop>
+    </linearGradient>
+    <linearGradient id="f" x1="720" y1="190.164" x2="724.341" y2="205.127" gradientUnits="userSpaceOnUse">
+      <stop stop-color="white" offset=".2"></stop>
+      <stop offset="1" stop-color="white" stop-opacity="0"></stop>
+    </linearGradient>
+    <clipPath id="clip0_1328_22">
+      <rect width="1440" height="809.208" fill="white"></rect>
+    </clipPath>
+  </defs>
+</svg>

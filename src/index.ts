@@ -1,3 +1,7 @@
+// Generate somem markdown for a README detailing the various concepts covered and general overview of this project. Note that this is a recreation of the navbar menu from vercel.com/design. The css is not shown but I managed to get pixel perfect
+
+
+
 /**
  * Interface for the calcSwitcher function.
  */

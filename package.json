@@ -6,9 +6,8 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "copy-static": "node copy-minimize.js",
-    "predeploy": "npm run build && npm run copy-static",
-    "start": "node dist/index.js",
     "build": "tsc && tsup src/index.ts",
+    "predeploy": "npm run build && npm run copy-static",
     "deploy": "gh-pages -d dist"
   },
   "author": "chase ottofy",
